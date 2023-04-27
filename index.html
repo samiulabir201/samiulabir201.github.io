@@ -1,4 +1,17 @@
-
+<?php
+if(isset($_POST['submit'])){
+    $to = "samiulislam@iut-dhaka.edu";
+    $subject = "Contact form submission";
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+    $message = $_POST['message'];
+    
+    $body = "From: $name\nEmail: $email\nMobile: $mobile\nMessage: $message";
+    
+    mail($to, $subject, $body);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
