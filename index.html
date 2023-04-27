@@ -1,0 +1,250 @@
+<?php
+if(isset($_POST['submit'])){
+    $to = "samiulislam@iut-dhaka.edu";
+    $subject = "Contact form submission";
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $mobile = $_POST['mobile'];
+    $message = $_POST['message'];
+    
+    $body = "From: $name\nEmail: $email\nMobile: $mobile\nMessage: $message";
+    
+    mail($to, $subject, $body);
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Responsive Personal Portfolio Website Design | Samiul Islam</title>
+        <!-- box icons -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- custom css -->
+        
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!--header design -->
+        <header class="header">
+            <a href="#" class="logo">Portfolio</a>
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <nav class="navbar">  
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">Competitions</a>
+                <a href="#experiences">Experiences</a>
+                <a href="#contacts">Contact</a>
+            </nav>
+        </header>
+
+        <!--home section design-->
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hello, It's me</h3>
+                <h1>Samiul Islam</h1>
+                <h3>And I'm a <span class="multiple-text"></span></h3>
+                <p>I am currently pursuing a degree in Computer Science and Engineering (CSE). 
+                    Along with my proficiency in programming and software development, 
+                    I have a keen interest in photography, graphic design, and illustration. 
+                    </p>
+                <div class="social-media">
+                    <a href="https://web.facebook.com/profile.php?id=100074364170341"><i class="bx bxl-facebook"></i></a>
+                    <a href="https://twitter.com/samiul180041221"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://github.com/samiulabir201"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/samiul-islam-1a8298210/"><i class='bx bxl-linkedin-square'></i></i></a>
+                </div>
+                <a href="https://drive.google.com/file/d/1cAdpIDqVripRz5pVGBgwGbwsuZj-h89q/view?usp=sharing" class="btn">Download CV</a>
+            </div>
+
+            <div class="home-image">
+                <img src="images/my_image.png" alt="">
+            </div>
+        </section>
+
+        <!--about section-->
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="images/my_image.png" alt="">
+            </div>
+
+            <div class="about-content">
+                <h2 class="heading">About<span> Me</span></h2>
+                <h3>Software developer</h3>
+                <p>I am a 7th-semester graduating student,  pursuing a B.Sc. (Engg.) degree in 
+                    Computer Science & Engineering at the Islamic University of Technology. 
+                    As an aspiring software developer, I possess a strong ability to understand 
+                    and analyze client requirements and have a solid understanding of software 
+                    architecture design. I have strong analytical and problem-solving skills that 
+                    enable me to transform business domain and specifications into high-quality code. 
+                    Although I do not yet have the required 1-2 years of experience, I am confident 
+                    in my ability to learn and adapt quickly. I am excited about the opportunity to 
+                    work with a team of experts and make meaningful contributions to the software 
+                    development industry.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </section>
+
+        <!--projectss section design-->
+
+        <section class="projects" id="projects">
+            <h2 class="heading">My <span>Projects</span></h2>
+
+            <div class="projects-container">
+                <div class="projects-box">
+                    <i class="bx bx-code-alt"></i>
+                    <h3>EaZyFoodManagement</h3>
+                    <p>A java based web application to order and deliver food online. It has three types of profile : Customer, Rider and admin.
+                        Customer can see and add foods to cart and order multiple items together . Rider can see the 
+                        pickup and delivery locations of the order and Admin can update the food items and see and cancel order.
+                        Also it can locate riders location and approximate delivery time.</p>
+                    <a href="#" class="btn">Find More</a>
+                </div>
+
+                <div class="projects-box">
+                    <i class="bx bx-paint"></i>
+                    <h3>Hospital-Management-System</h3>
+                    <p>Hospital Management System (HMS) is a system mainly focussed on automating the process 
+                        of storing employee profiles and keeping track of the patient records and diagnostic 
+                        information to make those information readily available to doctors for ensuring faster 
+                        service and smooth organization of data.</p>
+                    <a href="https://github.com/samiulabir201/Hospital-Management-System" class="btn">Find More</a>
+                </div>
+
+                <div class="projects-box">
+                    <i class="bx bx-code-alt"></i>
+                    <h3>Tutorate</h3>
+                    <p>A java based full stack web application for tutors and students that can help students 
+                        finding home tutors and vice-versa.
+                        The tutor rating is done based on patience, punctuality, effectiveness , clarity and review.  
+                        Also help teachers find students based on nearest locations, salary and availability etc. 
+                        Also a chatting system is implemented to maintain communication between both parties.</p>
+                    <a href="https://github.com/samiulabir201/Tutorate" class="btn">Find More</a>
+                </div>
+
+
+                <div class="projects-box">
+                    <i class="bx bx-code-alt"></i>
+                    <h3>Face_Mask_Project</h3>
+                    <p>I created a face mask detection project using Python, Keras, OpenCV and MobileNet . 
+                        The architecture I used here to train data is Convolutional Neural Network architecture (CNN). 
+                        But instead of using traditional CNN, I used MobileNet architecture (as it takes very less 
+                        computation power to run or apply transfer learning to). The image dataset to train the model 
+                        is taken from Kaggle and some open-source image libraries and google images.</p>
+                    <a href="https://github.com/samiulabir201/Face_Mask_Project" class="btn">Find More</a>
+                </div>
+
+
+
+                <div class="projects-box">
+                    <i class="bx bx-code-alt"></i>
+                    <h3>OpenCV-Python-Face-Recognition-Attendance</h3>
+                    <p>In this project I tried to perform facial recognition test with high accuracy result. 
+                        The project creates a real-time attendance result of the persons after facial recognition.
+                        I used a face recognition library by Adam Geitgey to recognize the faces and 
+                        differentiate between different people. “SVM classifier” machine learning method was 
+                        used to differentiate between different people and to find the matches.</p>
+                    <a href="#" class="btn">Find More</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="achievements" id="achievements">
+            <h2 class="heading">My<span> Competitions</span></h2>
+
+            <div class="achievements-container">
+                <div class="achievements-box">
+                    <img src="images/mars rover certificate.jpg" alt="">
+                    <div class="achievements-layer">
+                        <h4>Indian Rover Challenge</h4>
+                        <p>Participated and won the second runner up prize in the Indian Rover Challenge, 
+                            2019. As part of the Rover development team, I along with my sub-team contributed 
+                            in developing and improving the automated rover navigation system, detecting obstacles, 
+                            and grabbing objects.
+                            .</p>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+
+                <div class="achievements-box">
+                    <img src="images/bitfest.jpg" alt="">
+                    <div class="achievements-layer">
+                        <h4>Bitfest-2019</h4>
+                        <p>In this hackathon, we proposed a solution for efficient product delivery system . 
+                            The given challenge was to track the order in real time and we provided a solution for that.
+                        </p>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+
+                <div class="achievements-box">
+                    <img src="images/datathon2.0.jpg" alt="">
+                    <div class="achievements-layer">
+                        <h4>Robi Datathon 2.0</h4>
+                        <p>In this competetion we were given a categorical dataset and the goal was to create a classification model
+                            to classify the unknown level of test dataset based on our training dataset</p>
+                        <a href="#"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>
+
+            </div>
+          </section>
+
+
+        <section class="about" id="experiences">
+            <div class="about-img">
+                <img src="images/my_experiences.jpg" alt="">
+            </div>
+
+            <div class="about-content">
+                <h2 class="heading">My<span> Experiences</span></h2>
+                <h3><span>Junior Software Engineer</span> - INTERN</h3>
+                <h3>Battery Low Interactive Ltd.</h3>
+                <p>
+                Here I developed flutter based Mobile Application
+I also implemented machine learning model in the developed application. Moreover I completed and kept track daily task goal using task tracking software - JIRA 
+Finally I worked in a team project and developed a simple third person shooter horror adventure game using “Unreal game engine 4”.
+</p>
+            </div>
+        </section>
+        
+        <section class="contacts" id="contacts">
+            <h2 class="heading">Contct<span> Me!</span></h2>
+
+        <form action="#" method="POST">
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Full Name">
+                    <input type="email" name="email" placeholder="Email Address">
+                </div>
+            
+                <div class="input-box">
+                    <input type="number" name="mobile" placeholder="Mobile Number">
+                    <input type="text" name="subject" placeholder="Email Subject">
+                </div>
+            
+                <textarea name="message" placeholder="Your Message"></textarea>
+                <input type="submit" name="submit" value="Send message" class="btn">
+            </form>
+        </section>
+
+        <!--footer design-->
+
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright &copy; 2023 by Samiul Islam | All rights reserved.</p>
+            </div>
+
+
+            <div class="footer-iconTop">
+                <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+    </html>
